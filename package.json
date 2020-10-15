@@ -4,8 +4,8 @@
   "description": "",
   "main": "./src/server.js",
   "scripts": {
-    "start": "nodemon -e ts --exec \"npm run compile\"",
-    "compile": "cti create -i BaseEntity.ts ./src&& (tsc || exit 1) && node ./build/server.js"
+    "start": "npm run compile && nodemon ./build/server.js",
+    "compile": "tsc"
   },
   "keywords": [],
   "author": "",

@@ -18,3 +18,5 @@ export const schema = new EntitySchema<Planet, BaseEntity>({
     population: { type: 'number' },
   },
 });
+
+exports.planetSchema = schema;

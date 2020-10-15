@@ -6,7 +6,7 @@ export interface BaseEntity {
   updatedAt: Date;
 }
 
-export const schema = new EntitySchema<BaseEntity>({
+const schema = new EntitySchema<BaseEntity>({
   name: 'BaseEntity',
   abstract: true,
   properties: {
@@ -15,3 +15,5 @@ export const schema = new EntitySchema<BaseEntity>({
     updatedAt: { type: 'Date', onCreate: () => new Date(), onUpdate: () => new Date(), nullable: true },
   },
 });
+
+exports.baseSchema = schema;
