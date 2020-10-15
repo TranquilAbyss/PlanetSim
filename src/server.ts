@@ -24,7 +24,7 @@ const app: Application = express();
       baseDir: __dirname, // defaults to `process.cwd()`
   })
   DI.em = DI.orm.em;
-  DI.planetRepository = DI.orm.em.getRepository(Planet);
+  DI.planetRepository = DI.orm.em.getRepository('Planet') as unknown as EntityRepository<Planet>;
 
   app.use('/', router)
 
