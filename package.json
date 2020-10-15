@@ -1,0 +1,25 @@
+{
+  "name": "PlanetSim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "nodemon -e ts --exec \"npm run compile\"",
+    "compile": "cti create -i BaseEntity.ts ./src&& (tsc || exit 1) && node ./build/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/core": "^4.0.0",
+    "@mikro-orm/postgresql": "^4.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "create-ts-index": "^1.13.6",
+    "nodemon": "^2.0.4",
+    "typescript": "^4.0.2"
+  }
+}
